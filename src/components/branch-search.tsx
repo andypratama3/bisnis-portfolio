@@ -55,7 +55,7 @@ export function BranchSearch({ branches }: { branches: Business[] }) {
               Cari berdasarkan kebutuhan
             </h2>
             <p className="mt-1 text-sm text-ink-soft">
-              Ketik buah, beras, frozen, atau sayur untuk menemukan toko yang tepat.
+              Ketik nama toko, jenis produk, atau kebutuhan untuk menemukan toko yang tepat.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export function BranchSearch({ branches }: { branches: Business[] }) {
               id="branch-search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Buah, beras, frozen, sayur…"
+              placeholder="Cari toko atau kebutuhan"
               className="pl-10"
               autoComplete="off"
             />
