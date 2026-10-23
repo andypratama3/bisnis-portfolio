@@ -37,7 +37,10 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Toko" className="hidden items-center gap-1 rounded-full border border-line/60 bg-surface/60 px-1.5 py-1 lg:flex">
+        <nav
+          aria-label="Toko"
+          className="hidden items-center gap-1 rounded-full border border-line/60 bg-surface/60 px-1.5 py-1 lg:flex"
+        >
           {siteNav.map((item) => (
             <Link
               key={item.href}

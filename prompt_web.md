@@ -9,11 +9,11 @@
 
 **Bisa, tapi bukan pilihan terbaik kalau hanya 1 URL.** Rekomendasi: **1 aplikasi, 1 hub, 4 halaman cabang.**
 
-| Opsi | Kelebihan | Kekurangan |
-|---|---|---|
-| 1 page panjang, 4 section | Cepat dibuat, mudah dibagikan | 1 URL harus mewakili 4 bisnis berbeda; Google sulit membedakan; field "Website" di tiap Google Business Profile jadi menunjuk ke halaman yang sama |
-| **Hub + 4 route cabang (dipilih)** | Tiap GBP punya URL sendiri; SEO lokal per bisnis; schema `LocalBusiness` per cabang; tetap satu codebase, satu desain | Sedikit lebih banyak halaman |
-| 4 website terpisah | Isolasi penuh | Biaya maintenance 4x, tidak ada cerita "satu pemilik" |
+| Opsi                               | Kelebihan                                                                                                             | Kekurangan                                                                                                                                         |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 page panjang, 4 section          | Cepat dibuat, mudah dibagikan                                                                                         | 1 URL harus mewakili 4 bisnis berbeda; Google sulit membedakan; field "Website" di tiap Google Business Profile jadi menunjuk ke halaman yang sama |
+| **Hub + 4 route cabang (dipilih)** | Tiap GBP punya URL sendiri; SEO lokal per bisnis; schema `LocalBusiness` per cabang; tetap satu codebase, satu desain | Sedikit lebih banyak halaman                                                                                                                       |
+| 4 website terpisah                 | Isolasi penuh                                                                                                         | Biaya maintenance 4x, tidak ada cerita "satu pemilik"                                                                                              |
 
 Struktur rute:
 
@@ -64,31 +64,42 @@ Buat `src/data/businesses.ts`. **Semua teks, kontak, dan JSON-LD dibangkitkan da
 ```ts
 export type Business = {
   slug: "citra-buah" | "sentra-sembako" | "fatur-frozen-food" | "sumber-tani-makmur";
-  name: string;                 // PERSIS seperti plang & GBP, tanpa tambahan kata kunci
-  tagline: string;              // plain language, maks 8 kata
-  category: string;             // kategori GBP utama
+  name: string; // PERSIS seperti plang & GBP, tanpa tambahan kata kunci
+  tagline: string; // plain language, maks 8 kata
+  category: string; // kategori GBP utama
   accent: { base: string; ink: string; soft: string }; // lihat palet
-  phone: string;                // format E.164, mis. "+6281346880168"
-  whatsapp: string;             // digit saja untuk wa.me, mis. "6281346880168"
-  address: { street: string; kelurahan: string; kecamatan: string; city: "Samarinda"; province: "Kalimantan Timur"; postalCode: string; postalCodeNeedsConfirmation?: boolean };
+  phone: string; // format E.164, mis. "+6281346880168"
+  whatsapp: string; // digit saja untuk wa.me, mis. "6281346880168"
+  address: {
+    street: string;
+    kelurahan: string;
+    kecamatan: string;
+    city: "Samarinda";
+    province: "Kalimantan Timur";
+    postalCode: string;
+    postalCodeNeedsConfirmation?: boolean;
+  };
   geo: { lat: number; lng: number; approximate: true };
-  mapsUrl: string;              // link rute berdasarkan koordinat
-  hours: Record<"mon"|"tue"|"wed"|"thu"|"fri"|"sat"|"sun", { open: string; close: string } | null> | null; // null = belum diisi
-  description: string;          // ≤ 750 karakter (batas GBP) — satu teks dipakai di web & GBP
+  mapsUrl: string; // link rute berdasarkan koordinat
+  hours: Record<
+    "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun",
+    { open: string; close: string } | null
+  > | null; // null = belum diisi
+  description: string; // ≤ 750 karakter (batas GBP) — satu teks dipakai di web & GBP
   photos: { src: string; alt: string; kind: "logo" | "exterior" | "interior" | "product" }[];
   products: Product[];
-  googleReviewUrl?: string;     // isi setelah profil Verified
+  googleReviewUrl?: string; // isi setelah profil Verified
 };
 ```
 
 ### Data yang sudah pasti (dari TODO GBP)
 
-| Slug | Nama | Kategori | Telepon | Alamat | Kode pos | Koordinat (estimasi) |
-|---|---|---|---|---|---|---|
-| `citra-buah` | Citra Buah | Toko Buah | +62 813-4688-0168 | Jl. Pada Elo RT.03, Baqa, Samarinda Seberang | 75131 ⚠️ (kelurahan menulis 75132, set `postalCodeNeedsConfirmation: true`) | -0.506935, 117.140205 |
-| `sentra-sembako` | Sentra Sembako | Toko Kelontong | +62 822-5433-8455 | Jl. Gatot Subroto RT.43, Pelita, Samarinda Ilir | 75117 | -0.489936, 117.153346 |
-| `fatur-frozen-food` | Fatur Frozen Food | Toko Makanan Beku | +62 851-1710-8612 | Jl. P. Bendahara RT.05, Tenun, Samarinda Seberang | 75133 | -0.511662, 117.148452 |
-| `sumber-tani-makmur` | Sumber Tani Makmur | Toko Buah dan Sayur | +62 898-0256-129 | Jl. Bung Tomo RT.07, Baqa, Samarinda Seberang | 75131 ⚠️ (sama seperti Citra Buah) | -0.509191, 117.138854 |
+| Slug                 | Nama               | Kategori            | Telepon           | Alamat                                            | Kode pos                                                                    | Koordinat (estimasi)  |
+| -------------------- | ------------------ | ------------------- | ----------------- | ------------------------------------------------- | --------------------------------------------------------------------------- | --------------------- |
+| `citra-buah`         | Citra Buah         | Toko Buah           | +62 813-4688-0168 | Jl. Pada Elo RT.03, Baqa, Samarinda Seberang      | 75131 ⚠️ (kelurahan menulis 75132, set `postalCodeNeedsConfirmation: true`) | -0.506935, 117.140205 |
+| `sentra-sembako`     | Sentra Sembako     | Toko Kelontong      | +62 822-5433-8455 | Jl. Gatot Subroto RT.43, Pelita, Samarinda Ilir   | 75117                                                                       | -0.489936, 117.153346 |
+| `fatur-frozen-food`  | Fatur Frozen Food  | Toko Makanan Beku   | +62 851-1710-8612 | Jl. P. Bendahara RT.05, Tenun, Samarinda Seberang | 75133                                                                       | -0.511662, 117.148452 |
+| `sumber-tani-makmur` | Sumber Tani Makmur | Toko Buah dan Sayur | +62 898-0256-129  | Jl. Bung Tomo RT.07, Baqa, Samarinda Seberang     | 75131 ⚠️ (sama seperti Citra Buah)                                          | -0.509191, 117.138854 |
 
 ### Aturan keras soal data yang BELUM ada
 
@@ -112,33 +123,38 @@ export type Business = {
 ## 4. Arah desain (sudah diputuskan, ikuti)
 
 ### Subjek dan suasana
+
 Pasar tradisional yang rapi: tumpukan buah, karung sembako, freezer dingin, sayur segar. Kesannya **hangat, jujur, dekat**, bukan korporat dan bukan startup SaaS. Tiap cabang punya "warna dagangannya" sendiri; keempatnya duduk di atas satu dasar yang tenang.
 
 ### Palet
-| Nama | Hex | Peran |
-|---|---|---|
-| Daun Tua | `#12261D` | Teks utama, footer |
-| Kertas Pasar | `#F5F8F2` | Latar halaman (hijau sangat pucat, bukan krem) |
-| Semangka | `#E23D5A` | Aksen Citra Buah |
-| Kunyit | `#E7B10A` | Aksen Sentra Sembako |
-| Es Biru | `#2B8CE0` | Aksen Fatur Frozen Food |
-| Daun Muda | `#2F9E57` | Aksen Sumber Tani Makmur, juga aksen hub/CTA WhatsApp |
+
+| Nama         | Hex       | Peran                                                 |
+| ------------ | --------- | ----------------------------------------------------- |
+| Daun Tua     | `#12261D` | Teks utama, footer                                    |
+| Kertas Pasar | `#F5F8F2` | Latar halaman (hijau sangat pucat, bukan krem)        |
+| Semangka     | `#E23D5A` | Aksen Citra Buah                                      |
+| Kunyit       | `#E7B10A` | Aksen Sentra Sembako                                  |
+| Es Biru      | `#2B8CE0` | Aksen Fatur Frozen Food                               |
+| Daun Muda    | `#2F9E57` | Aksen Sumber Tani Makmur, juga aksen hub/CTA WhatsApp |
 
 - Tiap aksen punya 3 turunan (`base`, `ink` untuk teks di atas latar terang, `soft` untuk latar lembut) sebagai CSS variable yang diganti per halaman cabang lewat `data-brand="slug"` di wrapper. Seluruh komponen shadcn membaca `--brand`, sehingga satu template cocok untuk 4 cabang.
 - **Kontras wajib WCAG AA** (teks 4.5:1). Kunyit terlalu terang untuk teks: pakai `ink` gelap (`#6B5200`) untuk teks, `base` hanya untuk blok warna/ikon.
 - Dark mode: tidak wajib. Kalau ada, jangan sekadar membalik warna; turunkan dari Daun Tua.
 
 ### Tipografi
+
 - **Bricolage Grotesque** (display, variable, bobot 600–800): bentuknya punya karakter pasar/poster, bukan font default.
 - **Plus Jakarta Sans** (body, 400/500/600): rapi, terbaca di layar HP, akrab bagi pembaca Indonesia.
 - Skala: 14 / 16 / 18 / 24 / 32 / 48 / 72 (clamp untuk fluid). Panjang baris < 70 karakter. Heading memakai sentence case.
 - Hindari: label ALL-CAPS tracking lebar di atas setiap heading, aksen satu kata saja di headline, penomoran 01/02/03 (konten ini bukan urutan), strip pemisah dengan titik tengah.
 
 ### Bentuk dan permukaan
+
 - Radius dibedakan menurut hierarki: panel besar 28px, kartu 16px, tombol/chip pill. Jangan satu radius untuk semuanya.
 - Tidak ada gradient wash dekoratif. Warna datar, foto asli sebagai pemberi tekstur. Bayangan hanya untuk elemen yang melayang (bottom bar, drawer, popover).
 
 ### Satu momen yang dibuat berani: hero "Rak Empat Cabang"
+
 Hero adalah satu baris **empat panel vertikal** (di mobile: tumpukan vertikal, tiap panel tinggi 25vh) dengan warna aksen masing-masing.
 
 ```
@@ -159,6 +175,7 @@ Desktop (≥1024px) — panel flex, yang di-hover/fokus melebar ke ~50%
 - Ini satu-satunya animasi besar di halaman. Sisanya tenang: tanpa fade-up di setiap section, tanpa hover-lift di setiap kartu.
 
 ### Sisa halaman hub (urutan)
+
 1. Hero Rak Empat Cabang.
 2. **Cari toko untuk kebutuhanmu**: input pencarian + chip ("buah", "sayur", "beras", "frozen", "bumbu"). Hasil menyorot cabang yang relevan dan menggulir ke produknya. Pencarian murni client-side dari `products`.
 3. **Peta cabang**: 4 kartu lokasi berdampingan di daftar, plus tautan rute per cabang. Tidak perlu SDK peta berat; gunakan tautan Google Maps. Boleh iframe embed **lazy** per kartu hanya saat dibuka.
@@ -168,6 +185,7 @@ Desktop (≥1024px) — panel flex, yang di-hover/fokus melebar ke ~50%
 7. Footer: 4 cabang (nama, alamat, telepon klik-langsung), nama grup, tahun.
 
 ### Halaman cabang `/[slug]` (template)
+
 1. Header cabang: nama, kategori, **badge Buka/Tutup** (dihitung dari `hours` zona waktu `Asia/Makassar`/WITA; jika `hours === null` tampil "Jam belum diumumkan").
 2. Galeri: carousel Embla dengan lightbox; urutan Cover → Exterior → Interior → Product. Alt text deskriptif.
 3. **Katalog + Keranjang Pesan**: kartu produk (jika ada), tombol "Tambah ke daftar"; ikon keranjang membuka **Sheet** berisi daftar, jumlah (stepper), catatan, dan tombol **"Kirim ke WhatsApp"**. Pesan dibangkitkan rapi:
@@ -184,6 +202,7 @@ Desktop (≥1024px) — panel flex, yang di-hover/fokus melebar ke ~50%
 6. Lintas-cabang: kartu kecil 3 cabang lain ("Butuh yang lain? Lihat toko kami di Baqa / Pelita / Tenun").
 
 ### Elemen khusus mobile (prioritas utama)
+
 - **Bottom action bar** menempel di halaman cabang: `Telepon · WhatsApp · Rute`, target sentuh ≥ 48px, aman terhadap `env(safe-area-inset-bottom)`.
 - Navigasi atas ringkas: logo/grup di kiri, menu Sheet di kanan.
 - Angka target performa: LCP < 2,5 dtk pada throttling "Slow 4G", total JS halaman cabang < 150 KB gzip, gambar hero < 200 KB.

@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-import { getBusiness } from "@/data/businesses";
-import { siteConfig } from "@/data/site";
+import { businesses, getBusiness } from "@/data/businesses";
 import { localBusinessJsonLd } from "@/lib/jsonld";
-import { absoluteUrl } from "@/lib/utils";
+import { generateBranchMetadata } from "@/lib/branch-page";
 import { JsonLd } from "@/components/json-ld";
 import { BranchHero } from "@/components/branch-hero";
 import { BranchGallery } from "@/components/branch-gallery";
@@ -12,41 +10,20 @@ import { BranchLocation } from "@/components/branch-location";
 import { CrossLinks } from "@/components/cross-links";
 import { ActionBar } from "@/components/action-bar";
 
-const business = getBusiness("sumber-tani-makmur");
-
-export function generateMetadata(): Metadata {
-  if (!business) return {};
-
-  return {
-    title: `${business.name} | Sayur Segar & Bumbu Samarinda`,
-    description: business.description,
-    alternates: {
-      canonical: `/${business.slug}`,
-    },
-    openGraph: {
-      type: "website",
-      locale: siteConfig.locale,
-      url: absoluteUrl(`/${business.slug}`),
-      siteName: siteConfig.name,
-      title: business.name,
-      description: business.description,
-      images: business.photos.map((photo) => ({
-        url: absoluteUrl(photo.src),
-        width: photo.width,
-        height: photo.height,
-        alt: photo.alt,
-      })),
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: business.name,
-      description: business.description,
-      images: business.photos.map((photo) => absoluteUrl(photo.src)),
-    },
-  };
+export function generateStaticParams() {
+  return businesses.map((business) => ({ slug: business.slug }));
 }
 
-export default function SumberTaniMakmurPage() {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const business = getBusiness(slug);
+  if (!business) return {};
+  return generateBranchMetadata(business);
+}
+
+export default async function BranchPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const business = getBusiness(slug);
   if (!business) notFound();
 
   return (

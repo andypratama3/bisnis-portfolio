@@ -6,12 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Photo } from "@/data/types";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 
 export function BranchGallery({ photos, name }: { photos: Photo[]; name: string }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: photos.length > 1 });

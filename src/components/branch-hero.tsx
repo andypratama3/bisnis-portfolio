@@ -6,12 +6,17 @@ import { BranchLogo } from "@/components/branch-logo";
 import { OpenBadge } from "@/components/open-badge";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { TEXT } from "@/lib/constants";
 
 export function BranchHero({ business }: { business: Business }) {
   return (
     <section data-brand={business.slug} className="border-b border-line bg-brand-soft">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:py-10">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs font-medium text-ink-soft">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:py-14">
+        <nav
+          aria-label="Breadcrumb"
+          className="flex items-center gap-1.5 text-xs font-medium text-ink-soft"
+        >
           <Link href="/" className="hover:text-ink hover:underline">
             Beranda
           </Link>
@@ -19,25 +24,30 @@ export function BranchHero({ business }: { business: Business }) {
           <span aria-current="page">{business.name}</span>
         </nav>
 
-        <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start">
-          <BranchLogo business={business} className="size-20 bg-white" />
+        <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-start">
+          <BranchLogo business={business} className="size-24 bg-white sm:size-28" />
 
           <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2.5">
               <Badge>{business.category}</Badge>
               <Badge variant="neutral">Sejak {business.established}</Badge>
               <OpenBadge hours={business.hours} />
             </div>
 
-            <h1 className="mt-3 font-display text-4xl leading-[1.05] font-bold text-balance sm:text-5xl">
+            <h1 className={cn("mt-4 font-display font-bold text-balance", TEXT.heading.h1)}>
               {business.name}
             </h1>
-            <p className="mt-2 max-w-2xl text-base leading-relaxed text-ink-soft text-pretty">
+            <p
+              className={cn(
+                "mt-3 max-w-2xl leading-relaxed text-ink-soft text-pretty",
+                TEXT.body.lg,
+              )}
+            >
               {business.tagline}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
-              <Button asChild>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button asChild className="shadow-lg">
                 <a
                   href={generalWhatsAppUrl(business.name, business.whatsapp)}
                   target="_blank"

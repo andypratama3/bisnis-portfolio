@@ -14,13 +14,7 @@ export type Product = {
 };
 
 export type DayKey =
-  | "sunday"
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday";
+  "sunday" | "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday";
 
 export type DayHours = {
   opens: string;
@@ -43,6 +37,7 @@ export type Business = {
   category: string;
   tagline: string;
   description: string;
+  metaTitleSuffix: string;
   established: number;
   address: BusinessAddress;
   geo: {

@@ -2,13 +2,7 @@ import Image from "next/image";
 import type { Business } from "@/data/types";
 import { cn } from "@/lib/utils";
 
-export function BranchLogo({
-  business,
-  className,
-}: {
-  business: Business;
-  className?: string;
-}) {
+export function BranchLogo({ business, className }: { business: Business; className?: string }) {
   if (business.logo) {
     return (
       <span
@@ -36,7 +30,12 @@ export function BranchLogo({
       )}
       aria-hidden="true"
     >
-      SS
+      {business.name
+        .split(" ")
+        .slice(0, 2)
+        .map((word) => word[0])
+        .join("")
+        .toUpperCase()}
     </span>
   );
 }

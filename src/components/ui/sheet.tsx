@@ -9,7 +9,10 @@ const Sheet = SheetPrimitive.Root;
 const SheetTrigger = SheetPrimitive.Trigger;
 const SheetClose = SheetPrimitive.Close;
 
-function SheetOverlay({ className, ...props }: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
+function SheetOverlay({
+  className,
+  ...props
+}: React.ComponentProps<typeof SheetPrimitive.Overlay>) {
   return (
     <SheetPrimitive.Overlay
       className={cn(
@@ -25,12 +28,7 @@ type SheetContentProps = React.ComponentProps<typeof SheetPrimitive.Content> & {
   side?: "left" | "right";
 };
 
-function SheetContent({
-  className,
-  children,
-  side = "right",
-  ...props
-}: SheetContentProps) {
+function SheetContent({ className, children, side = "right", ...props }: SheetContentProps) {
   return (
     <SheetPrimitive.Portal>
       <SheetOverlay />
@@ -84,7 +82,10 @@ function SheetDescription({
 function SheetFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("mt-auto border-t border-line bg-card p-4 pb-[max(1rem,env(safe-area-inset-bottom))]", className)}
+      className={cn(
+        "mt-auto border-t border-line bg-card p-4 pb-[max(1rem,env(safe-area-inset-bottom))]",
+        className,
+      )}
       {...props}
     />
   );

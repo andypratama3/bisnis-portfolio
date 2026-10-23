@@ -3,12 +3,20 @@ import { MapPin, MessageCircle, Phone } from "lucide-react";
 import { businesses } from "@/data/businesses";
 import { siteConfig, siteNav } from "@/data/site";
 import { generalWhatsAppUrl } from "@/lib/whatsapp";
+import { CONTAINER_WIDTHS } from "@/lib/constants";
+import { IconWrapper } from "@/components/shared/icon-wrapper";
 import { LogoMark } from "@/components/logo-mark";
+import { cn } from "@/lib/utils";
 
 export function SiteFooter() {
   return (
     <footer className="mt-20 border-t border-line bg-card">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
+      <div
+        className={cn(
+          "mx-auto grid gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.1fr_1fr]",
+          CONTAINER_WIDTHS.default,
+        )}
+      >
         <div>
           <div className="flex items-center gap-2.5">
             <LogoMark />
@@ -38,15 +46,17 @@ export function SiteFooter() {
                 {business.name}
               </Link>
               <p className="mt-1.5 flex items-start gap-1.5 leading-relaxed text-ink-soft">
-                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                <span>{business.address.street}, {business.address.kelurahan}</span>
+                <IconWrapper icon={MapPin} className="mt-0.5 shrink-0" />
+                <span>
+                  {business.address.street}, {business.address.kelurahan}
+                </span>
               </p>
               <div className="mt-1.5 flex flex-wrap gap-3">
                 <a
                   className="inline-flex items-center gap-1.5 text-ink-soft hover:text-ink"
                   href={`tel:${business.phoneE164}`}
                 >
-                  <Phone className="size-4" aria-hidden="true" />
+                  <IconWrapper icon={Phone} />
                   <span>Telepon</span>
                 </a>
                 <a
@@ -55,7 +65,7 @@ export function SiteFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="size-4" aria-hidden="true" />
+                  <IconWrapper icon={MessageCircle} />
                   <span>WhatsApp</span>
                 </a>
               </div>
@@ -65,8 +75,15 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-line">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-ink-soft sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} {siteConfig.name}. Samarinda, Kalimantan Timur.</p>
+        <div
+          className={cn(
+            "mx-auto flex flex-col gap-2 px-4 py-5 text-xs text-ink-soft sm:flex-row sm:items-center sm:justify-between sm:px-6",
+            CONTAINER_WIDTHS.default,
+          )}
+        >
+          <p>
+            © {new Date().getFullYear()} {siteConfig.name}. Samarinda, Kalimantan Timur.
+          </p>
           <p>Alamat dan nomor dapat berubah. Konfirmasi lewat WhatsApp.</p>
         </div>
       </div>

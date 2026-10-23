@@ -8,16 +8,8 @@ import { cn } from "@/lib/utils";
 
 const unknownState: OpenState = { status: "unknown", label: "Jam belum diumumkan" };
 
-export function OpenBadge({
-  hours,
-  className,
-}: {
-  hours: WeeklyHours | null;
-  className?: string;
-}) {
-  const [state, setState] = useState<OpenState>(() =>
-    hours ? unknownState : unknownState,
-  );
+export function OpenBadge({ hours, className }: { hours: WeeklyHours | null; className?: string }) {
+  const [state, setState] = useState<OpenState>(unknownState);
 
   useEffect(() => {
     if (!hours) return;

@@ -17,37 +17,42 @@ Link: https://business.google.com/create
 - [ ] Jangan tempel logo digital ke foto ruko; foto lokasi harus asli.
 
 ### Perbaikan file sebelum submit
+
 - [ ] Sentra Sembako: export ulang logo bersih (sekarang screenshot aplikasi desain).
 - [ ] Fatur Frozen Food: blur plat "KT 3750 B" di `fatur-frozen-food-eksterior-3.jpeg`.
 - [ ] Sumber Tani Makmur: tambah minimal 1 foto eksterior (sekarang 2).
 - [ ] Tambah foto interior + produk untuk semua bisnis (opsional tapi disarankan).
 
 ### Data referensi
-| Bisnis | Alamat (GBP) | Kode Pos | Koordinat (estimasi) |
-|---|---|---|---|
-| Citra Buah | Jl. Pada Elo RT.03, Baqa, Samarinda Seberang | 75131* | -0.506935, 117.140205 |
-| Sentra Sembako | Jl. Gatot Subroto RT.43, Pelita, Samarinda Ilir | 75117 | -0.489936, 117.153346 |
-| Fatur Frozen Food | Jl. P. Bendahara RT.05, Tenun, Samarinda Seberang | 75133 | -0.511662, 117.148452 |
-| Sumber Tani Makmur | Jl. Bung Tomo RT.07, Baqa, Samarinda Seberang | 75131* | -0.509191, 117.138854 |
+
+| Bisnis             | Alamat (GBP)                                      | Kode Pos | Koordinat (estimasi)  |
+| ------------------ | ------------------------------------------------- | -------- | --------------------- |
+| Citra Buah         | Jl. Pada Elo RT.03, Baqa, Samarinda Seberang      | 75131*   | -0.506935, 117.140205 |
+| Sentra Sembako     | Jl. Gatot Subroto RT.43, Pelita, Samarinda Ilir   | 75117    | -0.489936, 117.153346 |
+| Fatur Frozen Food  | Jl. P. Bendahara RT.05, Tenun, Samarinda Seberang | 75133    | -0.511662, 117.148452 |
+| Sumber Tani Makmur | Jl. Bung Tomo RT.07, Baqa, Samarinda Seberang     | 75131*   | -0.509191, 117.138854 |
 
 \* Situs Kelurahan Baqa menulis 75132 — konfirmasi ke kelurahan/pemilik sebelum submit.
 
 ### Peta folder → kategori upload GBP
-| Kategori di GBP | Folder lokal | File |
-|---|---|---|
-| **Logo** | `foto-logo/` | `<bisnis>-logo.jpeg` |
-| **Cover** | `foto-lokasi/` | `<bisnis>-eksterior-1.jpeg` |
-| **Exterior** | `foto-lokasi/` | `<bisnis>-eksterior-2.jpeg` dst. |
-| **Interior** | belum ada | tambah foto rak/stok dalam |
-| **Product** | `foto-produk/` | `produk-01.jpg` – `produk-05.jpg` (masih 0 byte) |
-| **At work** (opsional) | belum ada | foto pemilik/staf packing |
+
+| Kategori di GBP        | Folder lokal   | File                                             |
+| ---------------------- | -------------- | ------------------------------------------------ |
+| **Logo**               | `foto-logo/`   | `<bisnis>-logo.jpeg`                             |
+| **Cover**              | `foto-lokasi/` | `<bisnis>-eksterior-1.jpeg`                      |
+| **Exterior**           | `foto-lokasi/` | `<bisnis>-eksterior-2.jpeg` dst.                 |
+| **Interior**           | belum ada      | tambah foto rak/stok dalam                       |
+| **Product**            | `foto-produk/` | `produk-01.jpg` – `produk-05.jpg` (masih 0 byte) |
+| **At work** (opsional) | belum ada      | foto pemilik/staf packing                        |
 
 **Jangan upload ke GBP:**
+
 - `foto-legal/foto-ktp.jpg` dan `foto-legal/foto-pemilik.jpg` → arsip internal saja.
 - Semua `foto-produk/*.jpg` yang masih 0 byte → akan gagal.
 - `02-sentra-sembako/foto-logo/sentra-sembako-logo.jpeg` → masih screenshot.
 
 **Di step mana uploadnya:**
+
 1. Saat onboarding, setelah isi jam & deskripsi, muncul step **"Tambahkan foto"** → upload **Logo** dan **Cover**.
 2. Jika step foto dilewati/ditutup, buka dashboard profil → menu **Foto** → tambah per kategori **Logo / Cover / Exterior / Interior / Product**.
 3. Cover dipilih dari salah satu foto eksterior terbaik; logo tetap diunggah terpisah (jangan overlay).
@@ -57,6 +62,7 @@ Link: https://business.google.com/create
 ## URUTAN APPLY (dari paling siap)
 
 ### 1) Citra Buah — paling siap
+
 - [ ] Buka business.google.com/create → pilih "Add your business"
 - [ ] Nama: `Citra Buah` (persis seperti plang)
 - [ ] Kategori utama: **Toko Buah** (cek dropdown; alternatif: Toko Buah dan Sayur)
@@ -76,6 +82,7 @@ Link: https://business.google.com/create
 - [ ] Cek status di Business Profile Manager sampai **Verified**
 
 ### 2) Fatur Frozen Food
+
 - [ ] Blur plat kendaraan dulu
 - [ ] Nama: `Fatur Frozen Food`
 - [ ] Kategori utama: **Toko Makanan Beku** (alternatif: Toko Daging)
@@ -92,6 +99,7 @@ Link: https://business.google.com/create
 - [ ] Verifikasi → cek status
 
 ### 3) Sentra Sembako
+
 - [ ] Export ulang logo (jangan screenshot) → minimal 720×720
 - [ ] Nama: `Sentra Sembako`
 - [ ] Kategori utama: **Toko Kelontong** (alternatif: Toko Sembako)
@@ -108,6 +116,7 @@ Link: https://business.google.com/create
 - [ ] Verifikasi → cek status
 
 ### 4) Sumber Tani Makmur
+
 - [ ] Tambah 1 foto eksterior (total min. 3)
 - [ ] Nama: `Sumber Tani Makmur`
 - [ ] Kategori utama: **Toko Buah dan Sayur** (alternatif: Toko Sayur)
@@ -128,6 +137,7 @@ Link: https://business.google.com/create
 ## PANDUAN VIDEO VERIFIKASI
 
 Satu take, tanpa edit, durasi ±2–5 menit, cahaya cukup:
+
 - [ ] Mulai dari jalan: tunjukkan nama jalan/patokan dan plang toko terbaca.
 - [ ] Sorot nama usaha di plang (harus sama dengan nama GBP).
 - [ ] Jalan ke pintu masuk, buka pintu.
@@ -162,9 +172,9 @@ Satu take, tanpa edit, durasi ±2–5 menit, cahaya cukup:
 
 ## PROGRESS
 
-| Bisnis | Submit | Verified | Live | Tanggal |
-|---|---|---|---|---|
-| Citra Buah | ⬜ | ⬜ | ⬜ | |
-| Fatur Frozen Food | ⬜ | ⬜ | ⬜ | |
-| Sentra Sembako | ⬜ | ⬜ | ⬜ | |
-| Sumber Tani Makmur | ⬜ | ⬜ | ⬜ | |
+| Bisnis             | Submit | Verified | Live | Tanggal |
+| ------------------ | ------ | -------- | ---- | ------- |
+| Citra Buah         | ⬜     | ⬜       | ⬜   |         |
+| Fatur Frozen Food  | ⬜     | ⬜       | ⬜   |         |
+| Sentra Sembako     | ⬜     | ⬜       | ⬜   |         |
+| Sumber Tani Makmur | ⬜     | ⬜       | ⬜   |         |

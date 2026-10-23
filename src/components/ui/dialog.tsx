@@ -9,7 +9,10 @@ const Dialog = DialogPrimitive.Root;
 const DialogTrigger = DialogPrimitive.Trigger;
 const DialogClose = DialogPrimitive.Close;
 
-function DialogOverlay({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+function DialogOverlay({
+  className,
+  ...props
+}: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
   return (
     <DialogPrimitive.Overlay
       className={cn(
@@ -49,14 +52,21 @@ function DialogContent({
 }
 
 function DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {
-  return <DialogPrimitive.Title className={cn("font-display text-xl font-semibold", className)} {...props} />;
+  return (
+    <DialogPrimitive.Title
+      className={cn("font-display text-xl font-semibold", className)}
+      {...props}
+    />
+  );
 }
 
 function DialogDescription({
   className,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Description>) {
-  return <DialogPrimitive.Description className={cn("text-sm text-ink-soft", className)} {...props} />;
+  return (
+    <DialogPrimitive.Description className={cn("text-sm text-ink-soft", className)} {...props} />
+  );
 }
 
 export { Dialog, DialogTrigger, DialogClose, DialogContent, DialogTitle, DialogDescription };

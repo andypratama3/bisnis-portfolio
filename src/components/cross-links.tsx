@@ -20,9 +20,7 @@ export function CrossLinks({ currentSlug }: { currentSlug: string }) {
             >
               <span className="text-xs font-bold text-brand-ink">{business.category}</span>
               <span className="mt-1 font-display text-lg font-bold">{business.name}</span>
-              <span className="mt-1 text-sm leading-relaxed text-ink-soft">
-                {business.tagline}
-              </span>
+              <span className="mt-1 text-sm leading-relaxed text-ink-soft">{business.tagline}</span>
               <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-ink">
                 Lihat toko
                 <ArrowRight

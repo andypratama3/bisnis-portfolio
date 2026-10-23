@@ -17,7 +17,10 @@ const dayLabels: Record<DayKey, string> = {
 
 export function BranchLocation({ business }: { business: Business }) {
   return (
-    <section aria-labelledby="location-title" className="rounded-panel border border-line bg-card p-5 panel-shadow">
+    <section
+      aria-labelledby="location-title"
+      className="rounded-panel border border-line bg-card p-5 panel-shadow"
+    >
       <div className="flex items-start justify-between gap-3">
         <h2 id="location-title" className="font-display text-xl font-bold">
           Lokasi & jam
@@ -95,9 +98,7 @@ export function BranchLocation({ business }: { business: Business }) {
         </div>
       </div>
 
-      <p className="mt-3 text-center text-xs text-ink-soft tabular-nums">
-        {business.phoneDisplay}
-      </p>
+      <p className="mt-3 text-center text-xs text-ink-soft tabular-nums">{business.phoneDisplay}</p>
     </section>
   );
 }

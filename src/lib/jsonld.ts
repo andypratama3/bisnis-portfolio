@@ -1,6 +1,55 @@
-import type { Business } from "@/data/types";
+import type { Business, DayKey, WeeklyHours } from "@/data/types";
 import { siteConfig } from "@/data/site";
 import { absoluteUrl } from "./utils";
+
+const dayNames: Record<DayKey, string> = {
+  monday: "Monday",
+  tuesday: "Tuesday",
+  wednesday: "Wednesday",
+  thursday: "Thursday",
+  friday: "Friday",
+  saturday: "Saturday",
+  sunday: "Sunday",
+};
+
+const dayOrder: DayKey[] = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+];
+
+function buildOpeningHours(hours: WeeklyHours) {
+  const groups = new Map<string, string[]>();
+
+  for (const day of dayOrder) {
+    const value = hours[day];
+    if (!value) continue;
+    const key = `${value.opens}-${value.closes}`;
+    const dayName = dayNames[day];
+    const existing = groups.get(key);
+    if (existing) {
+      existing.push(dayName);
+    } else {
+      groups.set(key, [dayName]);
+    }
+  }
+
+  if (groups.size === 0) return undefined;
+
+  return Array.from(groups.entries()).map(([key, days]) => {
+    const [opens, closes] = key.split("-");
+    return {
+      "@type": "OpeningHoursSpecification" as const,
+      dayOfWeek: days,
+      opens,
+      closes,
+    };
+  });
+}
 
 export function localBusinessJsonLd(business: Business) {
   return {
@@ -28,6 +77,7 @@ export function localBusinessJsonLd(business: Business) {
     },
     hasMap: business.mapsUrl,
     areaServed: business.serviceArea,
+    openingHoursSpecification: business.hours ? buildOpeningHours(business.hours) : undefined,
   };
 }
 

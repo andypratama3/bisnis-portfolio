@@ -19,5 +19,11 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types/**/*.d.ts"],
-  "exclude": ["node_modules", "01-sumber-tani-makmur", "02-sentra-sembako", "03-citra-buah", "04-fatur-frozen-food"]
+  "exclude": [
+    "node_modules",
+    "01-sumber-tani-makmur",
+    "02-sentra-sembako",
+    "03-citra-buah",
+    "04-fatur-frozen-food"
+  ]
 }

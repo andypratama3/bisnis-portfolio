@@ -44,8 +44,5 @@ export function whatsappUrl(phoneDigits: string, message: string) {
 }
 
 export function generalWhatsAppUrl(businessName: string, phoneDigits: string) {
-  return whatsappUrl(
-    phoneDigits,
-    buildOrderMessage({ businessName, items: [] }),
-  );
+  return whatsappUrl(phoneDigits, buildOrderMessage({ businessName, items: [] }));
 }

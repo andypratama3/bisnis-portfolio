@@ -5,6 +5,7 @@ Update checklist ini setelah data diisi. Format: centang `[x]` jika sudah, `[~]`
 ---
 
 ## 1. Sumber Tani Makmur — Toko Sayur Segar
+
 Folder: `01-sumber-tani-makmur/`
 
 - [x] `deskripsi.md` terisi data utama (alamat, modal, hasil, kontak)
@@ -28,6 +29,7 @@ Folder: `01-sumber-tani-makmur/`
 ---
 
 ## 2. Sentra Sembako
+
 Folder: `02-sentra-sembako/`
 
 - [x] `deskripsi.md` terisi data utama (alamat, modal, hasil, kontak)
@@ -51,6 +53,7 @@ Folder: `02-sentra-sembako/`
 ---
 
 ## 3. Citra Buah
+
 Folder: `03-citra-buah/`
 
 - [x] `deskripsi.md` terisi data utama (alamat, modal, hasil, kontak)
@@ -74,6 +77,7 @@ Folder: `03-citra-buah/`
 ---
 
 ## 4. Fatur Frozen Food
+
 Folder: `04-fatur-frozen-food/`
 
 - [x] `deskripsi.md` terisi data utama (alamat, modal, hasil, kontak)
@@ -98,12 +102,12 @@ Folder: `04-fatur-frozen-food/`
 
 ## Status Ringkas
 
-| No | Bisnis | Data Utama | Logo | Eksterior | Produk | Koordinat |
-|----|--------|-----------|------|-----------|--------|-----------|
-| 1 | Sumber Tani Makmur | ✅ | ✅ | ✅ (2) | ⬜ | 🟡 estimasi |
-| 2 | Sentra Sembako | ✅ | ✅ | ✅ (3) | ⬜ | 🟡 estimasi |
-| 3 | Citra Buah | ✅ | ✅ | ✅ (3) | ⬜ | 🟡 estimasi |
-| 4 | Fatur Frozen Food | ✅ | ✅ | ✅ (4) | ⬜ | 🟡 estimasi |
+| No  | Bisnis             | Data Utama | Logo | Eksterior | Produk | Koordinat   |
+| --- | ------------------ | ---------- | ---- | --------- | ------ | ----------- |
+| 1   | Sumber Tani Makmur | ✅         | ✅   | ✅ (2)    | ⬜     | 🟡 estimasi |
+| 2   | Sentra Sembako     | ✅         | ✅   | ✅ (3)    | ⬜     | 🟡 estimasi |
+| 3   | Citra Buah         | ✅         | ✅   | ✅ (3)    | ⬜     | 🟡 estimasi |
+| 4   | Fatur Frozen Food  | ✅         | ✅   | ✅ (4)    | ⬜     | 🟡 estimasi |
 
 ---
 
@@ -123,11 +127,13 @@ Folder: `04-fatur-frozen-food/`
 ---
 
 ## Catatan
+
 - Foto lama sudah di-rename: `logo.jpeg` → `foto-logo/<bisnis>-logo.jpeg`; `lokasi*.jpeg` / `WhatsApp*.jpeg` → `foto-lokasi/<bisnis>-eksterior-N.jpeg`.
 - Koordinat saat ini hasil geocoding alamat (level jalan), bukan share location pemilik. Minta pemilik mengirim "Share Location" WhatsApp untuk titik persis.
 - File produk/KTP/pemilik masih 0 byte — ganti dengan foto asli sebelum upload.
 
 ## Temuan Teknis Foto (diperbarui 23 Okt 2026)
+
 - Semua foto yang ada sudah memenuhi ketentuan dasar GBP: ≥720×720 px, 10 KB–5 MB, JPG, RGB, tanpa duplikat.
 - Sentra Sembako: 3 foto eksterior dikompres dari 5,9/5,9/7,4 MB menjadi 1,74/1,73/1,54 MB.
 - Logo Sumber Tani Makmur dipad ke 720×720 (sebelumnya 659×503).
@@ -140,12 +146,14 @@ Folder: `04-fatur-frozen-food/`
 - Foto belum bisa diverifikasi visual oleh saya (model tanpa input gambar) — cek manual: tajam, tidak blur, tidak ada wajah/plat/ dokumen pribadi.
 
 ## Referensi Kode Pos (perlu konfirmasi)
+
 - Baqa: 75131 (situs Kelurahan Baqa menulis 75132 — konfirmasi)
 - Pelita: 75117 (situs resmi Kelurahan Pelita)
 - Tenun: 75133
 - Kode pos dibutuhkan saat mengisi alamat di GBP.
 
 ## Kesiapan Submit GBP
+
 - [ ] Pin peta digeser ke titik ruko sebenarnya (koordinat sekarang estimasi level jalan)
 - [ ] Jam operasional diisi
 - [ ] Kategori utama dipilih

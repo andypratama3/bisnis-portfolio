@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Empat Toko Samarinda",
-  title: "Empat Toko Samarinda — Buah, Sembako, Frozen Food, Sayur",
+  title: "Toko Buah, Sembako, Frozen Food & Sayur Terpercaya di Samarinda",
   description:
-    "Empat toko di Samarinda: Citra Buah, Sentra Sembako, Fatur Frozen Food, dan Sumber Tani Makmur. Lihat lokasi, jam, dan hubungi lewat WhatsApp.",
+    "Belanja kebutuhan harian di 4 toko terpercaya Samarinda: Citra Buah (buah segar), Sentra Sembako (kebutuhan pokok), Fatur Frozen Food (makanan beku), Sumber Tani Makmur (sayuran). Lokasi jelas, foto asli, pesan via WhatsApp.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bisnis-portfolio.vercel.app",
   locale: "id_ID",
   city: "Samarinda",

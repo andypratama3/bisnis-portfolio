@@ -76,8 +76,8 @@ export function BranchCatalog({ business }: { business: Business }) {
           <div>
             <h3 className="font-display text-xl font-bold">Katalog belum tersedia</h3>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-ink-soft text-pretty">
-              Pemilik toko belum mengirimkan daftar produk dan harga. Tanyakan stok hari ini
-              lewat WhatsApp agar tidak menebak-nebak.
+              Pemilik toko belum mengirimkan daftar produk dan harga. Tanyakan stok hari ini lewat
+              WhatsApp agar tidak menebak-nebak.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <Button asChild size="sm">

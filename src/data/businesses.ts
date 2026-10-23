@@ -7,6 +7,7 @@ const citraBuah: Business = {
   tagline: "Buah lokal dan impor untuk kebutuhan harian.",
   description:
     "Citra Buah adalah toko buah di Jalan Pada Elo RT.03, Baqa, Samarinda Seberang. Menyediakan buah lokal dan impor untuk kebutuhan sehari-hari. Buah dipilih dan disiapkan agar tetap segar. Melayani pembelian langsung di toko serta pesanan (PO); ketersediaan buah tertentu dapat dikonfirmasi lebih dulu melalui WhatsApp.",
+  metaTitleSuffix: "Buah Lokal & Impor Samarinda",
   established: 2026,
   address: {
     street: "Jalan Pada Elo RT.03",
@@ -64,6 +65,7 @@ const sentraSembako: Business = {
   tagline: "Sembako, bumbu, dan kebutuhan dapur sehari-hari.",
   description:
     "Sentra Sembako adalah toko kebutuhan pokok di Jalan Gatot Subroto RT.43, Pelita, Samarinda Ilir. Menyediakan sembako, aneka bumbu dapur, dan bumbu sasetan untuk kebutuhan rumah tangga maupun usaha kecil. Produk ditata agar mudah dicari dan stok dijaga untuk kebutuhan harian. Melayani pembelian langsung di toko dan pesanan (PO); silakan hubungi melalui WhatsApp untuk ketersediaan barang.",
+  metaTitleSuffix: "Sembako, Bumbu & Kebutuhan Dapur",
   established: 2025,
   address: {
     street: "Jalan Gatot Subroto RT.43",
@@ -131,6 +133,7 @@ const faturFrozenFood: Business = {
   tagline: "Daging dan sayuran frozen untuk stok harian.",
   description:
     "Fatur Frozen Food menjual daging frozen dan sayuran frozen di Jalan P. Bendahara RT.05, Tenun, Samarinda Seberang. Menyediakan stok makanan beku untuk kebutuhan rumah tangga, pedagang makanan, dan reseller. Produk disimpan dalam kondisi beku agar kualitasnya terjaga. Melayani pembelian langsung di toko dan pesanan (PO); hubungi WhatsApp untuk ketersediaan stok.",
+  metaTitleSuffix: "Daging & Sayur Frozen Samarinda",
   established: 2025,
   address: {
     street: "Jalan P. Bendahara RT.05",
@@ -205,6 +208,7 @@ const sumberTaniMakmur: Business = {
   tagline: "Sayuran segar dan bumbu untuk dapur Anda.",
   description:
     "Sumber Tani Makmur adalah toko yang menjual produk pertanian dan perbumbuan di Jalan Bung Tomo RT.07, Baqa, Samarinda Seberang. Menyediakan sayuran segar, bumbu dapur, dan hasil pertanian untuk kebutuhan rumah tangga maupun pedagang. Produk dipilih dari pasokan yang segar dan ditata agar mudah dipilih. Melayani pembelian langsung dan pesanan (PO); hubungi WhatsApp untuk ketersediaan produk.",
+  metaTitleSuffix: "Sayur Segar & Bumbu Samarinda",
   established: 2026,
   address: {
     street: "Jalan Bung Tomo RT.07",
@@ -251,24 +255,11 @@ const sumberTaniMakmur: Business = {
   ],
   products: [],
   hours: null,
-  keywords: [
-    "sayur",
-    "sayuran",
-    "bumbu",
-    "pertanian",
-    "hasil tani",
-    "baqa",
-    "samarinda seberang",
-  ],
+  keywords: ["sayur", "sayuran", "bumbu", "pertanian", "hasil tani", "baqa", "samarinda seberang"],
   order: 4,
 };
 
-export const businesses: Business[] = [
-  citraBuah,
-  sentraSembako,
-  faturFrozenFood,
-  sumberTaniMakmur,
-];
+export const businesses: Business[] = [citraBuah, sentraSembako, faturFrozenFood, sumberTaniMakmur];
 
 export function getBusiness(slug: string): Business | undefined {
   return businesses.find((business) => business.slug === slug);
