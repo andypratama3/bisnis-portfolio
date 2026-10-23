@@ -1,0 +1,10 @@
+.next
+node_modules
+package-lock.json
+public/images
+playwright-report
+test-results
+01-sumber-tani-makmur
+02-sentra-sembako
+03-citra-buah
+04-fatur-frozen-food

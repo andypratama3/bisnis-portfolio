@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f5f8f2;
+  --color-paper-strong: #e8efe4;
+  --color-ink: #12261d;
+  --color-ink-soft: #42594c;
+  --color-line: #d5dfd2;
+  --color-card: #ffffff;
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-contrast: var(--brand-contrast);
+  --color-danger: #b42318;
+
+  --radius-card: 1rem;
+  --radius-panel: 1.75rem;
+}
+
+:root {
+  --brand: #2f9e57;
+  --brand-ink: #1c6b39;
+  --brand-soft: #e4f4ea;
+  --brand-contrast: #ffffff;
+  color-scheme: light;
+}
+
+[data-brand="citra-buah"] {
+  --brand: #e23d5a;
+  --brand-ink: #a31732;
+  --brand-soft: #fbe7eb;
+}
+
+[data-brand="sentra-sembako"] {
+  --brand: #e7b10a;
+  --brand-ink: #6b5200;
+  --brand-soft: #fbf1d1;
+  --brand-contrast: #12261d;
+}
+
+[data-brand="fatur-frozen-food"] {
+  --brand: #2b8ce0;
+  --brand-ink: #125a96;
+  --brand-soft: #e3f1fc;
+}
+
+[data-brand="sumber-tani-makmur"] {
+  --brand: #2f9e57;
+  --brand-ink: #1c6b39;
+  --brand-soft: #e4f4ea;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  ::selection {
+    background: var(--brand-soft);
+    color: var(--brand-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-ink);
+    outline-offset: 3px;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .skip-link {
+    @apply fixed top-3 left-3 z-50 -translate-y-24 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition-transform duration-150;
+  }
+
+  .skip-link:focus {
+    @apply translate-y-0;
+  }
+
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+
+  .panel-shadow {
+    box-shadow:
+      0 1px 2px rgb(18 38 29 / 0.06),
+      0 18px 48px -28px rgb(18 38 29 / 0.35);
+  }
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sheet-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sheet-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sheet-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dialog-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0.5rem) scale(0.98);
+  }
+}
+
+@layer utilities {
+  .animate-overlay-in {
+    animation: overlay-in 160ms ease-out;
+  }
+
+  .animate-overlay-out {
+    animation: overlay-out 140ms ease-out;
+  }
+
+  .animate-sheet-in {
+    animation: sheet-in 180ms ease-out;
+  }
+
+  .animate-sheet-out {
+    animation: sheet-out 140ms ease-out;
+  }
+
+  .animate-sheet-in-left {
+    animation: sheet-in-left 180ms ease-out;
+  }
+
+  .animate-sheet-out-left {
+    animation: sheet-out-left 140ms ease-out;
+  }
+
+  .animate-dialog-in {
+    animation: dialog-in 180ms ease-out;
+  }
+
+  .animate-dialog-out {
+    animation: dialog-out 140ms ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

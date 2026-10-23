@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Empat Toko Samarinda">
+  <rect width="64" height="64" rx="14" fill="#12261D"/>
+  <rect x="12" y="12" width="18" height="18" rx="4" fill="#E23D5A"/>
+  <rect x="34" y="12" width="18" height="18" rx="4" fill="#E7B10A"/>
+  <rect x="12" y="34" width="18" height="18" rx="4" fill="#2B8CE0"/>
+  <rect x="34" y="34" width="18" height="18" rx="4" fill="#2F9E57"/>
+</svg>
