@@ -29,7 +29,7 @@ export function BranchRack({ branches }: { branches: Business[] }) {
         </Badge>
         <h1
           id="hero-title"
-          className={cn("mt-8 font-display font-bold tracking-tight text-balance", TEXT.display)}
+          className="mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight text-balance sm:text-6xl lg:text-7xl xl:text-8xl"
         >
           <span className="block">Empat toko,</span>
           <span className="block text-gradient">satu kebutuhan harian.</span>

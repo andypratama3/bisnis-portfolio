@@ -36,13 +36,10 @@ export function WhySection() {
         </p>
       </div>
       <ul className="mt-12 grid gap-6 md:grid-cols-3 lg:gap-8">
-        {reasons.map((reason, index) => (
+        {reasons.map((reason) => (
           <li
             key={reason.title}
             className="group relative overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-card to-paper p-8 transition-all duration-300 hover:shadow-xl hover:shadow-brand/5 hover:-translate-y-1"
-            style={{
-              animationDelay: `${index * 100}ms`,
-            }}
           >
             <div className="relative">
               <div className="inline-flex rounded-2xl bg-brand-soft p-4 shadow-sm">

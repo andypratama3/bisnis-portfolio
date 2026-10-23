@@ -1,0 +1,50 @@
+
+> bisnis-portfolio@1.0.0 build
+> next build
+
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F)), '/System/Volumes/Preboot/Cryptexes/OS/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F))
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/andypratama3/Development/pnpm-lock.yaml as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/andypratama3/Development/Busines/package-lock.json
+
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F)), '/System/Volumes/Preboot/Cryptexes/OS/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F))
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F)), '/System/Volumes/Preboot/Cryptexes/OS/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F))
+ ⚠ Attempted to load @next/swc-darwin-arm64, but an error occurred: dlopen(/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node, 0x0001): tried: '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F)), '/System/Volumes/Preboot/Cryptexes/OS/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (no such file), '/Users/andypratama3/Development/Busines/node_modules/@next/swc-darwin-arm64/next-swc.darwin-arm64.node' (segment '__TEXT' content (fileOffset: 0x0 -> 0x75A4000) extends beyond end of file (length: 0x24B122F))
+ ✓ Compiled successfully in 1093ms
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/12) ...
+   Generating static pages (3/12) 
+   Generating static pages (6/12) 
+   Generating static pages (9/12) 
+ ✓ Generating static pages (12/12)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    52.1 kB         181 kB
+├ ○ /_not-found                            132 B         103 kB
+├ ● /[slug]                              17.7 kB         166 kB
+├   ├ /citra-buah
+├   ├ /sentra-sembako
+├   ├ /fatur-frozen-food
+├   └ /sumber-tani-makmur
+├ ○ /icon.svg                                0 B            0 B
+├ ○ /manifest.webmanifest                  132 B         103 kB
+├ ○ /robots.txt                            132 B         103 kB
+└ ○ /sitemap.xml                           132 B         103 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/255-b1e2483a7e02feee.js       46.6 kB
+  ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
+  └ other shared chunks (total)          1.92 kB
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

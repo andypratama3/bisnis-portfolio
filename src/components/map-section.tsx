@@ -28,7 +28,7 @@ export function MapSection({ branches }: { branches: Business[] }) {
       </div>
 
       {/* Bento Grid Layout - Asymmetric for visual hierarchy */}
-      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {branches.map((business, index) => (
           <li
             key={business.slug}
