@@ -78,6 +78,13 @@ const sentraSembako: Business = {
   whatsapp: "6282254338455",
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=-0.489936,117.153346",
   serviceArea: "Samarinda Ilir",
+  logo: {
+    src: "/images/sentra-sembako/logo.jpg",
+    alt: "Logo Sentra Sembako",
+    width: 1000,
+    height: 1000,
+    kind: "logo",
+  },
   photos: [
     {
       src: "/images/sentra-sembako/toko-1.jpg",
@@ -167,6 +174,13 @@ const faturFrozenFood: Business = {
       height: 1600,
       kind: "exterior",
     },
+    {
+      src: "/images/fatur-frozen-food/toko-4.jpg",
+      alt: "Foto lokasi Fatur Frozen Food di Jalan P. Bendahara, Tenun (4)",
+      width: 3123,
+      height: 4160,
+      kind: "exterior",
+    },
   ],
   products: [],
   hours: null,
@@ -223,6 +237,13 @@ const sumberTaniMakmur: Business = {
     {
       src: "/images/sumber-tani-makmur/toko-2.jpg",
       alt: "Foto lokasi Sumber Tani Makmur di Jalan Bung Tomo, Baqa (2)",
+      width: 960,
+      height: 1280,
+      kind: "exterior",
+    },
+    {
+      src: "/images/sumber-tani-makmur/toko-3.jpg",
+      alt: "Foto lokasi Sumber Tani Makmur di Jalan Bung Tomo, Baqa (3)",
       width: 960,
       height: 1280,
       kind: "exterior",
