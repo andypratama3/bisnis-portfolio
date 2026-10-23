@@ -2,65 +2,101 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-bricolage), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
-  --color-paper: #f5f8f2;
-  --color-paper-strong: #e8efe4;
-  --color-ink: #12261d;
-  --color-ink-soft: #42594c;
-  --color-line: #d5dfd2;
+  --color-paper: #f8faf6;
+  --color-paper-strong: #eef3ea;
+  --color-paper-subtle: #f3f7ef;
+  --color-ink: #0f1f17;
+  --color-ink-soft: #3d5246;
+  --color-ink-muted: #5a6f61;
+  --color-line: #d7e2d1;
+  --color-line-soft: #e4ebe0;
   --color-card: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
   --color-brand: var(--brand);
   --color-brand-ink: var(--brand-ink);
   --color-brand-soft: var(--brand-soft);
   --color-brand-contrast: var(--brand-contrast);
-  --color-danger: #b42318;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
 
-  --radius-card: 1rem;
-  --radius-panel: 1.75rem;
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
+  --radius-card: 1.25rem;
+  --radius-panel: 2rem;
 }
 
 :root {
-  --brand: #2f9e57;
-  --brand-ink: #1c6b39;
-  --brand-soft: #e4f4ea;
+  --brand: #22c55e;
+  --brand-ink: #166534;
+  --brand-soft: #dcfce7;
   --brand-contrast: #ffffff;
   color-scheme: light;
 }
 
 [data-brand="citra-buah"] {
-  --brand: #e23d5a;
-  --brand-ink: #a31732;
-  --brand-soft: #fbe7eb;
+  --brand: #f43f5e;
+  --brand-ink: #9f1239;
+  --brand-soft: #ffe4e6;
 }
 
 [data-brand="sentra-sembako"] {
-  --brand: #e7b10a;
-  --brand-ink: #6b5200;
-  --brand-soft: #fbf1d1;
-  --brand-contrast: #12261d;
+  --brand: #f59e0b;
+  --brand-ink: #92400e;
+  --brand-soft: #fef3c7;
+  --brand-contrast: #1c1917;
 }
 
 [data-brand="fatur-frozen-food"] {
-  --brand: #2b8ce0;
-  --brand-ink: #125a96;
-  --brand-soft: #e3f1fc;
+  --brand: #0ea5e9;
+  --brand-ink: #075985;
+  --brand-soft: #e0f2fe;
 }
 
 [data-brand="sumber-tani-makmur"] {
-  --brand: #2f9e57;
-  --brand-ink: #1c6b39;
-  --brand-soft: #e4f4ea;
+  --brand: #22c55e;
+  --brand-ink: #166534;
+  --brand-soft: #dcfce7;
 }
 
 @layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
   html {
     scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     @apply bg-paper font-sans text-ink antialiased;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-ink;
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   ::selection {
@@ -70,18 +106,24 @@
 
   :focus-visible {
     outline: 2px solid var(--brand-ink);
-    outline-offset: 3px;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
   }
 
   button,
   a {
     -webkit-tap-highlight-color: transparent;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer utilities {
   .skip-link {
-    @apply fixed top-3 left-3 z-50 -translate-y-24 rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition-transform duration-150;
+    @apply fixed top-4 left-4 z-[100] -translate-y-32 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200;
   }
 
   .skip-link:focus {
@@ -89,13 +131,67 @@
   }
 
   .safe-bottom {
-    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+    padding-bottom: max(0.875rem, env(safe-area-inset-bottom));
   }
 
   .panel-shadow {
     box-shadow:
-      0 1px 2px rgb(18 38 29 / 0.06),
-      0 18px 48px -28px rgb(18 38 29 / 0.35);
+      0 1px 1px rgb(15 31 23 / 0.02),
+      0 4px 6px -1px rgb(15 31 23 / 0.04),
+      0 10px 15px -3px rgb(15 31 23 / 0.06),
+      0 20px 25px -5px rgb(15 31 23 / 0.08);
+  }
+
+  .panel-shadow-lg {
+    box-shadow:
+      0 1px 1px rgb(15 31 23 / 0.02),
+      0 10px 15px -3px rgb(15 31 23 / 0.05),
+      0 20px 25px -5px rgb(15 31 23 / 0.08),
+      0 40px 60px -15px rgb(15 31 23 / 0.12);
+  }
+
+  .glass-subtle {
+    background: rgb(255 255 255 / 0.8);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--brand-ink) 0%, var(--brand) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -156,7 +252,7 @@
 @keyframes dialog-in {
   from {
     opacity: 0;
-    transform: translateY(0.5rem) scale(0.98);
+    transform: translateY(0.75rem) scale(0.96);
   }
   to {
     opacity: 1;
@@ -171,41 +267,53 @@
   }
   to {
     opacity: 0;
-    transform: translateY(0.5rem) scale(0.98);
+    transform: translateY(0.75rem) scale(0.96);
   }
 }
 
 @layer utilities {
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out both;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
   .animate-overlay-in {
-    animation: overlay-in 160ms ease-out;
+    animation: overlay-in 200ms ease-out;
   }
 
   .animate-overlay-out {
-    animation: overlay-out 140ms ease-out;
+    animation: overlay-out 150ms ease-out;
   }
 
   .animate-sheet-in {
-    animation: sheet-in 180ms ease-out;
+    animation: sheet-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-sheet-out {
-    animation: sheet-out 140ms ease-out;
+    animation: sheet-out 180ms cubic-bezier(0.4, 0, 1, 1);
   }
 
   .animate-sheet-in-left {
-    animation: sheet-in-left 180ms ease-out;
+    animation: sheet-in-left 220ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-sheet-out-left {
-    animation: sheet-out-left 140ms ease-out;
+    animation: sheet-out-left 180ms cubic-bezier(0.4, 0, 1, 1);
   }
 
   .animate-dialog-in {
-    animation: dialog-in 180ms ease-out;
+    animation: dialog-in 220ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .animate-dialog-out {
-    animation: dialog-out 140ms ease-out;
+    animation: dialog-out 180ms cubic-bezier(0.4, 0, 1, 1);
   }
 }
 
@@ -220,5 +328,6 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
   }
 }
