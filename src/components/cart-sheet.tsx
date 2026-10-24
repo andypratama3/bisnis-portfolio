@@ -55,7 +55,7 @@ export function CartSheet({ business }: { business: Business }) {
           <ShoppingBasket className="size-4" aria-hidden="true" />
           Keranjang
           {count > 0 && (
-            <span className="ml-1 rounded-full bg-brand px-2 py-0.5 text-[11px] font-bold text-brand-contrast tabular-nums">
+            <span className="ml-1 rounded-full bg-emerald-600 px-2 py-0.5 text-[11px] font-bold text-white tabular-nums">
               {count}
             </span>
           )}

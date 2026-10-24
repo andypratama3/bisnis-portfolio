@@ -16,7 +16,7 @@ export function ActionBar({ business }: { business: Business }) {
       href: generalWhatsAppUrl(business.name, business.whatsapp),
       label: "WhatsApp",
       icon: MessageCircle,
-      className: "bg-brand text-brand-contrast",
+      className: "bg-emerald-600 text-white hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500",
       external: true,
     },
     {
