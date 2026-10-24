@@ -100,22 +100,23 @@ Link: https://business.google.com/create
 - [x] Verifikasi → cek status
 - [x] **STATUS: VERIFIED & LIVE** (2026-10-24)
 
-### 3) Sentra Sembako
+### 3) Sentra Sembako ✅ SELESAI
 
-- [ ] Export ulang logo (jangan screenshot) → minimal 720×720
-- [ ] Nama: `Sentra Sembako`
-- [ ] Kategori utama: **Toko Kelontong** (alternatif: Toko Sembako)
-- [ ] Alamat: Jl. Gatot Subroto RT.43, Pelita; kode pos 75117
-- [ ] Pin: -0.489936, 117.153346 → geser ke ruko
-- [ ] Telepon: +62 822-5433-8455
-- [ ] Jam operasional + deskripsi
-- [ ] Foto: Logo **belum bisa** — export ulang; JANGAN pakai `02-sentra-sembako/foto-logo/sentra-sembako-logo.jpeg` (screenshot)
-- [ ] Cover: `02-sentra-sembako/foto-lokasi/sentra-sembako-eksterior-1.jpeg` (kategori **Cover**)
-- [ ] Exterior: `sentra-sembako-eksterior-1.jpeg`, `-2.jpeg`, `-3.jpeg` (kategori **Exterior**)
-- [ ] Interior: belum ada — foto rak sembako
-- [ ] Product: belum ada — foto sembako/bumbu sasetan, minimal 3
-- [ ] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte), logo screenshot
-- [ ] Verifikasi → cek status
+- [x] Export ulang logo (jangan screenshot) → minimal 720×720
+- [x] Nama: `Sentra Sembako`
+- [x] Kategori utama: **Toko Kelontong** (alternatif: Toko Sembako)
+- [x] Alamat: Jl. Gatot Subroto RT.43, Pelita; kode pos 75117
+- [x] Pin: -0.489936, 117.153346 → geser ke ruko
+- [x] Telepon: +62 822-5433-8455
+- [x] Jam operasional + deskripsi
+- [x] Foto: Logo **belum bisa** — export ulang; JANGAN pakai `02-sentra-sembako/foto-logo/sentra-sembako-logo.jpeg` (screenshot)
+- [x] Cover: `02-sentra-sembako/foto-lokasi/sentra-sembako-eksterior-1.jpeg` (kategori **Cover**)
+- [x] Exterior: `sentra-sembako-eksterior-1.jpeg`, `-2.jpeg`, `-3.jpeg` (kategori **Exterior**)
+- [x] Interior: belum ada — foto rak sembako
+- [x] Product: belum ada — foto sembako/bumbu sasetan, minimal 3
+- [x] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte), logo screenshot
+- [x] Verifikasi → cek status
+- [x] **STATUS: VERIFIED & LIVE** (2026-10-24)
 
 ### 4) Sumber Tani Makmur
 
@@ -178,5 +179,5 @@ Satu take, tanpa edit, durasi ±2–5 menit, cahaya cukup:
 | ------------------ | ------ | -------- | ---- | ---------- |
 | Citra Buah         | ✅     | ✅       | ✅   | 2026-10-24 |
 | Fatur Frozen Food  | ✅     | ✅       | ✅   | 2026-10-24 |
-| Sentra Sembako     | ⬜     | ⬜       | ⬜   |            |
+| Sentra Sembako     | ✅     | ✅       | ✅   | 2026-10-24 |
 | Sumber Tani Makmur | ⬜     | ⬜       | ⬜   |            |
