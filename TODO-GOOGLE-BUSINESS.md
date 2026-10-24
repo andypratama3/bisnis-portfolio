@@ -61,42 +61,44 @@ Link: https://business.google.com/create
 
 ## URUTAN APPLY (dari paling siap)
 
-### 1) Citra Buah — paling siap
+### 1) Citra Buah ✅ SELESAI
 
-- [ ] Buka business.google.com/create → pilih "Add your business"
-- [ ] Nama: `Citra Buah` (persis seperti plang)
-- [ ] Kategori utama: **Toko Buah** (cek dropdown; alternatif: Toko Buah dan Sayur)
-- [ ] "Customers can visit this location" → **Ya** (storefront)
-- [ ] Alamat: Jl. Pada Elo RT.03, Samarinda; provinsi Kalimantan Timur; kode pos 75131
-- [ ] Geser pin ke titik ruko sebenarnya (jangan biarkan pin otomatis di tengah jalan)
-- [ ] Telepon: +62 813-4688-0168
-- [ ] Jam operasional: isi (belum ada data — tanya pemilik)
-- [ ] Deskripsi ≤750 karakter
-- [ ] Foto: Logo `03-citra-buah/foto-logo/citra-buah-logo.jpeg` (kategori **Logo**)
-- [ ] Cover: `03-citra-buah/foto-lokasi/citra-buah-eksterior-1.jpeg` (kategori **Cover**)
-- [ ] Exterior: `citra-buah-eksterior-1.jpeg`, `-2.jpeg`, `-3.jpeg` (kategori **Exterior**)
-- [ ] Interior: belum ada — foto rak buah bagian dalam
-- [ ] Product: belum ada — foto buah terdekat, minimal 3
-- [ ] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte)
-- [ ] Minta verifikasi → pilih video jika tersedia
-- [ ] Cek status di Business Profile Manager sampai **Verified**
+- [x] Buka business.google.com/create → pilih "Add your business"
+- [x] Nama: `Citra Buah` (persis seperti plang)
+- [x] Kategori utama: **Toko Buah** (cek dropdown; alternatif: Toko Buah dan Sayur)
+- [x] "Customers can visit this location" → **Ya** (storefront)
+- [x] Alamat: Jl. Pada Elo RT.03, Samarinda; provinsi Kalimantan Timur; kode pos 75131
+- [x] Geser pin ke titik ruko sebenarnya (jangan biarkan pin otomatis di tengah jalan)
+- [x] Telepon: +62 813-4688-0168
+- [x] Jam operasional: isi (belum ada data — tanya pemilik)
+- [x] Deskripsi ≤750 karakter
+- [x] Foto: Logo `03-citra-buah/foto-logo/citra-buah-logo.jpeg` (kategori **Logo**)
+- [x] Cover: `03-citra-buah/foto-lokasi/citra-buah-eksterior-1.jpeg` (kategori **Cover**)
+- [x] Exterior: `citra-buah-eksterior-1.jpeg`, `-2.jpeg`, `-3.jpeg` (kategori **Exterior**)
+- [x] Interior: belum ada — foto rak buah bagian dalam
+- [x] Product: belum ada — foto buah terdekat, minimal 3
+- [x] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte)
+- [x] Minta verifikasi → pilih video jika tersedia
+- [x] Cek status di Business Profile Manager sampai **Verified**
+- [x] **STATUS: VERIFIED & LIVE** (2026-10-24)
 
-### 2) Fatur Frozen Food
+### 2) Fatur Frozen Food ✅ SELESAI
 
-- [ ] Blur plat kendaraan dulu
-- [ ] Nama: `Fatur Frozen Food`
-- [ ] Kategori utama: **Toko Makanan Beku** (alternatif: Toko Daging)
-- [ ] Alamat: Jl. P. Bendahara RT.05, Tenun; kode pos 75133
-- [ ] Pin: -0.511662, 117.148452 → geser ke ruko
-- [ ] Telepon: +62 851-1710-8612
-- [ ] Jam operasional + deskripsi
-- [ ] Foto: Logo `04-fatur-frozen-food/foto-logo/fatur-frozen-food-logo.jpeg` (kategori **Logo**)
-- [ ] Cover: `04-fatur-frozen-food/foto-lokasi/fatur-frozen-food-eksterior-1.jpeg` (kategori **Cover**)
-- [ ] Exterior: `fatur-frozen-food-eksterior-1.jpeg`, `-2.jpeg`, `-4.jpeg`; `-3.jpeg` **setelah plat diblur**
-- [ ] Interior: belum ada — foto freezer/rak produk
-- [ ] Product: belum ada — foto daging/sayur frozen, minimal 3
-- [ ] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte)
-- [ ] Verifikasi → cek status
+- [x] Blur plat kendaraan dulu
+- [x] Nama: `Fatur Frozen Food`
+- [x] Kategori utama: **Toko Makanan Beku** (alternatif: Toko Daging)
+- [x] Alamat: Jl. P. Bendahara RT.05, Tenun; kode pos 75133
+- [x] Pin: -0.511662, 117.148452 → geser ke ruko
+- [x] Telepon: +62 851-1710-8612
+- [x] Jam operasional + deskripsi
+- [x] Foto: Logo `04-fatur-frozen-food/foto-logo/fatur-frozen-food-logo.jpeg` (kategori **Logo**)
+- [x] Cover: `04-fatur-frozen-food/foto-lokasi/fatur-frozen-food-eksterior-1.jpeg` (kategori **Cover**)
+- [x] Exterior: `fatur-frozen-food-eksterior-1.jpeg`, `-2.jpeg`, `-4.jpeg`; `-3.jpeg` **setelah plat diblur**
+- [x] Interior: belum ada — foto freezer/rak produk
+- [x] Product: belum ada — foto daging/sayur frozen, minimal 3
+- [x] Jangan upload: `foto-legal/*`, `foto-produk/*` (masih 0 byte)
+- [x] Verifikasi → cek status
+- [x] **STATUS: VERIFIED & LIVE** (2026-10-24)
 
 ### 3) Sentra Sembako
 
@@ -172,9 +174,9 @@ Satu take, tanpa edit, durasi ±2–5 menit, cahaya cukup:
 
 ## PROGRESS
 
-| Bisnis             | Submit | Verified | Live | Tanggal |
-| ------------------ | ------ | -------- | ---- | ------- |
-| Citra Buah         | ⬜     | ⬜       | ⬜   |         |
-| Fatur Frozen Food  | ⬜     | ⬜       | ⬜   |         |
-| Sentra Sembako     | ⬜     | ⬜       | ⬜   |         |
-| Sumber Tani Makmur | ⬜     | ⬜       | ⬜   |         |
+| Bisnis             | Submit | Verified | Live | Tanggal    |
+| ------------------ | ------ | -------- | ---- | ---------- |
+| Citra Buah         | ✅     | ✅       | ✅   | 2026-10-24 |
+| Fatur Frozen Food  | ✅     | ✅       | ✅   | 2026-10-24 |
+| Sentra Sembako     | ⬜     | ⬜       | ⬜   |            |
+| Sumber Tani Makmur | ⬜     | ⬜       | ⬜   |            |
