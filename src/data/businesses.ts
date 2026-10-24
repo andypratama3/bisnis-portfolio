@@ -31,10 +31,10 @@ const citraBuah: Business = {
   },
   photos: [
     {
-      src: "/images/citra-buah/toko-1.jpg",
-      alt: "Tampak depan Citra Buah di Jalan Pada Elo, Baqa",
-      width: 1200,
-      height: 1600,
+      src: "/images/citra-buah/toko-1.png",
+      alt: "Storefront banner Citra Buah di Jalan Pada Elo, Baqa",
+      width: 1448,
+      height: 1086,
       kind: "exterior",
     },
     {
@@ -89,10 +89,10 @@ const sentraSembako: Business = {
   },
   photos: [
     {
-      src: "/images/sentra-sembako/toko-1.jpg",
-      alt: "Tampak depan Sentra Sembako di Jalan Gatot Subroto, Pelita",
-      width: 1600,
-      height: 1200,
+      src: "/images/sentra-sembako/toko-1.png",
+      alt: "Storefront facade Sentra Sembako di Jalan Gatot Subroto, Pelita",
+      width: 1448,
+      height: 1086,
       kind: "exterior",
     },
     {
@@ -157,10 +157,10 @@ const faturFrozenFood: Business = {
   },
   photos: [
     {
-      src: "/images/fatur-frozen-food/toko-1.jpg",
-      alt: "Tampak depan Fatur Frozen Food di Jalan P. Bendahara, Tenun",
-      width: 1201,
-      height: 1600,
+      src: "/images/fatur-frozen-food/toko-1.png",
+      alt: "Toko Fatur Frozen Food di Jalan P. Bendahara, Tenun",
+      width: 1448,
+      height: 1086,
       kind: "exterior",
     },
     {
@@ -232,10 +232,10 @@ const sumberTaniMakmur: Business = {
   },
   photos: [
     {
-      src: "/images/sumber-tani-makmur/toko-1.jpg",
-      alt: "Tampak depan Sumber Tani Makmur di Jalan Bung Tomo, Baqa",
-      width: 960,
-      height: 1280,
+      src: "/images/sumber-tani-makmur/toko-1.png",
+      alt: "Fresh storefront Sumber Tani Makmur di Jalan Bung Tomo, Baqa",
+      width: 1448,
+      height: 1086,
       kind: "exterior",
     },
     {
