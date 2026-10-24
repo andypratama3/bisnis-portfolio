@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, Sparkles } from "lucide-react";
+import { Menu, MessageCircle, Sparkles } from "lucide-react";
 import { businesses } from "@/data/businesses";
 import { siteNav } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -21,7 +21,7 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/80 glass-subtle">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-900/80">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
@@ -38,18 +38,35 @@ export function SiteHeader() {
         </Link>
 
         <nav
-          aria-label="Toko"
-          className="hidden items-center gap-1 rounded-full border border-line/60 bg-surface/60 px-1.5 py-1 lg:flex"
+          aria-label="Navigasi Utama"
+          className="hidden items-center gap-1 rounded-full border border-slate-200/60 bg-slate-50/60 px-1.5 py-1 dark:border-slate-800/60 dark:bg-slate-900/60 lg:flex"
         >
-          {siteNav.map((item) => (
+          <Link
+            href="/"
+            className={cn(
+              "relative rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200",
+              pathname === "/"
+                ? "bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+                : "text-slate-600 hover:bg-white/60 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800/60 dark:hover:text-white",
+            )}
+          >
+            Semua Toko
+          </Link>
+          <Link
+            href="/#lokasi"
+            className="relative rounded-full px-4 py-1.5 text-sm font-medium text-slate-600 transition-all duration-200 hover:bg-white/60 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800/60 dark:hover:text-white"
+          >
+            Peta Lokasi
+          </Link>
+          {siteNav.slice(0, 2).map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "relative rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200",
                 pathname === item.href
-                  ? "bg-brand-soft text-brand-ink shadow-sm"
-                  : "text-ink-soft hover:text-ink hover:bg-paper-strong/60",
+                  ? "bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white"
+                  : "text-slate-600 hover:bg-white/60 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800/60 dark:hover:text-white",
               )}
             >
               {item.label}
@@ -58,10 +75,18 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm" className="hidden sm:inline-flex">
-            <a href={`tel:${businesses[0].phoneE164}`}>
-              <Phone className="size-4" aria-hidden="true" />
-              <span>Hubungi</span>
+          <Button
+            asChild
+            size="sm"
+            className="hidden bg-emerald-600 text-white shadow-sm hover:bg-emerald-700 sm:inline-flex"
+          >
+            <a
+              href={`https://wa.me/${businesses[0].whatsapp.replace(/\D/g, "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle className="size-4" aria-hidden="true" />
+              <span>Hubungi Admin</span>
             </a>
           </Button>
 
@@ -71,47 +96,65 @@ export function SiteHeader() {
                 variant="outline"
                 size="icon-sm"
                 className="lg:hidden"
-                aria-label="Buka menu toko"
+                aria-label="Buka menu navigasi"
               >
                 <Menu className="size-4" aria-hidden="true" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="border-line">
-              <SheetHeader className="border-b border-line-soft">
+            <SheetContent side="left" className="border-slate-200 dark:border-slate-800">
+              <SheetHeader className="border-b border-slate-200 dark:border-slate-800">
                 <SheetTitle className="flex items-center gap-2">
-                  <Sparkles className="size-5 text-brand" aria-hidden="true" />
+                  <Sparkles className="size-5 text-emerald-600" aria-hidden="true" />
                   Empat Toko Samarinda
                 </SheetTitle>
                 <SheetDescription>
-                  Pilih toko untuk melihat lokasi, foto, dan kontak WhatsApp.
+                  Katalog direktori toko lokal untuk kebutuhan harian Anda.
                 </SheetDescription>
               </SheetHeader>
-              <nav aria-label="Menu toko" className="flex flex-col gap-1 px-4 py-4">
+              <nav aria-label="Menu navigasi mobile" className="flex flex-col gap-1 px-4 py-4">
                 <Link
                   href="/"
                   className={cn(
-                    "rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-paper-strong",
-                    pathname === "/" && "bg-brand-soft text-brand-ink",
+                    "rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-slate-100 dark:hover:bg-slate-800",
+                    pathname === "/" &&
+                      "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400",
                   )}
                 >
-                  Beranda
+                  Semua Toko
+                </Link>
+                <Link
+                  href="/#lokasi"
+                  className="rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  Peta Lokasi
                 </Link>
                 {siteNav.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-paper-strong",
-                      pathname === item.href && "bg-brand-soft text-brand-ink",
+                      "rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-slate-100 dark:hover:bg-slate-800",
+                      pathname === item.href &&
+                        "bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400",
                     )}
                   >
                     {item.label}
                   </Link>
                 ))}
               </nav>
-              <div className="mt-auto border-t border-line-soft px-6 py-4">
-                <p className="text-xs leading-relaxed text-ink-muted">
-                  Jam buka tiap toko belum diumumkan. Hubungi langsung sebelum berkunjung.
+              <div className="mt-auto border-t border-slate-200 px-6 py-4 dark:border-slate-800">
+                <Button asChild className="w-full bg-emerald-600 text-white hover:bg-emerald-700">
+                  <a
+                    href={`https://wa.me/${businesses[0].whatsapp.replace(/\D/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="size-4" aria-hidden="true" />
+                    Hubungi Admin
+                  </a>
+                </Button>
+                <p className="mt-3 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
+                  Hubungi admin untuk info pembelian grosir atau kerjasama.
                 </p>
               </div>
             </SheetContent>

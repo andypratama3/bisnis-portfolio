@@ -47,7 +47,7 @@ export function BranchHero({ business }: { business: Business }) {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Button asChild className="shadow-lg">
+              <Button asChild className="bg-emerald-600 text-white shadow-lg hover:bg-emerald-700">
                 <a
                   href={generalWhatsAppUrl(business.name, business.whatsapp)}
                   target="_blank"
@@ -57,13 +57,21 @@ export function BranchHero({ business }: { business: Business }) {
                   WhatsApp
                 </a>
               </Button>
-              <Button asChild variant="outline">
+              <Button
+                asChild
+                variant="outline"
+                className="border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+              >
                 <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
                   <Navigation className="size-4" aria-hidden="true" />
                   Rute
                 </a>
               </Button>
-              <Button asChild variant="outline">
+              <Button
+                asChild
+                variant="outline"
+                className="border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+              >
                 <a href={`tel:${business.phoneE164}`}>
                   <Phone className="size-4" aria-hidden="true" />
                   Telepon

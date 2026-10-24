@@ -1,4 +1,4 @@
-import { Camera, MapPin, MessageCircle } from "lucide-react";
+import { Camera, MapPin, Zap } from "lucide-react";
 import { SPACING } from "@/lib/constants";
 import { SectionContainer } from "@/components/shared/section-container";
 import { IconWrapper } from "@/components/shared/icon-wrapper";
@@ -6,18 +6,18 @@ import { IconWrapper } from "@/components/shared/icon-wrapper";
 const reasons = [
   {
     icon: Camera,
-    title: "Foto dari lokasi",
-    body: "Semua foto toko di situs ini berasal dari lokasi usaha, bukan foto stok.",
+    title: "Foto & Produk Asli",
+    body: "Semua foto toko di situs ini berasal dari lokasi usaha nyata, bukan foto stok atau mockup.",
   },
   {
     icon: MapPin,
-    title: "Alamat dan rute jelas",
-    body: "Setiap toko punya alamat lengkap dan tautan rute langsung ke Google Maps.",
+    title: "Alamat & Lokasi Presisi",
+    body: "Setiap toko punya alamat lengkap, pin Google Maps akurat, dan tautan rute langsung.",
   },
   {
-    icon: MessageCircle,
-    title: "Langsung ke WhatsApp",
-    body: "Nomor toko bisa dihubungi tanpa perantara untuk menanyakan stok atau pesanan.",
+    icon: Zap,
+    title: "Respon Cepat via WhatsApp",
+    body: "Hubungi langsung pemilik toko lewat WhatsApp untuk tanya stok, harga, dan pesanan.",
   },
 ];
 

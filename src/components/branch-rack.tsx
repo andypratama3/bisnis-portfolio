@@ -23,23 +23,35 @@ export function BranchRack({ branches }: { branches: Business[] }) {
       <div className="pointer-events-none absolute -top-20 left-1/2 -z-10 h-96 w-[min(85rem,90vw)] -translate-x-1/2 rounded-full bg-gradient-to-b from-brand-soft/70 to-transparent blur-3xl" />
 
       <div className="max-w-4xl">
-        <Badge variant="glass" className="gap-1.5">
+        <Badge
+          variant="glass"
+          className="gap-1.5 border-emerald-200/80 bg-emerald-50/80 text-emerald-700 dark:border-emerald-900/80 dark:bg-emerald-950/80 dark:text-emerald-400"
+        >
           <Sparkles className="size-3" aria-hidden="true" />
-          Samarinda, Kalimantan Timur
+          Katalog Direktori Toko Lokal Samarinda 2026
         </Badge>
         <h1
           id="hero-title"
           className="mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight text-balance sm:text-6xl lg:text-7xl xl:text-8xl"
         >
-          <span className="block">Empat toko,</span>
-          <span className="block text-gradient">satu kebutuhan harian.</span>
+          <span className="block">Belanja Sembako & Kebutuhan Dapur</span>
+          <span className="block text-gradient">Lebih Mudah di Samarinda</span>
         </h1>
-        <p className={cn("mt-6 max-w-2xl leading-relaxed text-ink-soft text-pretty", TEXT.body.lg)}>
-          Buah segar, sembako, frozen food, dan sayur harian dari toko lokal Samarinda. Pilih toko,
-          lihat lokasi, dan hubungi langsung lewat WhatsApp.
+        <p
+          className={cn(
+            "mt-6 max-w-2xl leading-relaxed text-slate-600 text-pretty dark:text-slate-400",
+            TEXT.body.lg,
+          )}
+        >
+          Pesan langsung via WhatsApp, lihat lokasi presisi di Google Maps, dan belanja kebutuhan
+          harian dari 4 toko lokal terpercaya di Samarinda.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button asChild size="lg" className="shadow-lg">
+          <Button
+            asChild
+            size="lg"
+            className="bg-emerald-600 text-white shadow-lg hover:bg-emerald-700"
+          >
             <a href="#toko">
               Jelajahi toko
               <ArrowRight
@@ -48,7 +60,12 @@ export function BranchRack({ branches }: { branches: Business[] }) {
               />
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="shadow-md">
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-slate-300 shadow-md dark:border-slate-700"
+          >
             <a href="#lokasi">
               Lihat peta lokasi
               <MapPin className="size-4" aria-hidden="true" />
@@ -123,7 +140,11 @@ export function BranchRack({ branches }: { branches: Business[] }) {
                       </span>
                     </p>
                     <div className="mt-6 flex flex-wrap gap-2.5">
-                      <Button asChild size="sm" className="shadow-md">
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-emerald-600 text-white shadow-md hover:bg-emerald-700"
+                      >
                         <a
                           href={generalWhatsAppUrl(business.name, business.whatsapp)}
                           target="_blank"
@@ -133,13 +154,23 @@ export function BranchRack({ branches }: { branches: Business[] }) {
                           WhatsApp
                         </a>
                       </Button>
-                      <Button asChild size="sm" variant="outline">
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                      >
                         <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
                           <Navigation className="size-4" aria-hidden="true" />
                           Rute
                         </a>
                       </Button>
-                      <Button asChild size="sm" variant="ghost">
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="ghost"
+                        className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+                      >
                         <Link href={`/${business.slug}`}>
                           Lihat toko
                           <ArrowRight

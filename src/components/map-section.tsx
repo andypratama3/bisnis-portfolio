@@ -78,19 +78,11 @@ export function MapSection({ branches }: { branches: Business[] }) {
             </address>
 
             <div className={cn("mt-auto flex flex-wrap gap-2", index === 0 ? "pt-6" : "pt-4")}>
-              <Button asChild size="sm" variant="outline" className="shadow-sm">
-                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
-                  <IconWrapper icon={Navigation} />
-                  Rute
-                </a>
-              </Button>
-              <Button asChild size="sm" variant="outline" className="shadow-sm">
-                <a href={`tel:${business.phoneE164}`}>
-                  <IconWrapper icon={Phone} />
-                  Telepon
-                </a>
-              </Button>
-              <Button asChild size="sm" variant="ghost">
+              <Button
+                asChild
+                size="sm"
+                className="bg-emerald-600 text-white shadow-sm hover:bg-emerald-700"
+              >
                 <a
                   href={generalWhatsAppUrl(business.name, business.whatsapp)}
                   target="_blank"
@@ -98,6 +90,28 @@ export function MapSection({ branches }: { branches: Business[] }) {
                 >
                   <IconWrapper icon={MessageCircle} />
                   WhatsApp
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                className="border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 shadow-sm dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+              >
+                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">
+                  <IconWrapper icon={Navigation} />
+                  Rute
+                </a>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                variant="ghost"
+                className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
+              >
+                <a href={`tel:${business.phoneE164}`}>
+                  <IconWrapper icon={Phone} />
+                  Telepon
                 </a>
               </Button>
             </div>
